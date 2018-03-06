@@ -2,4 +2,4 @@
 Photography Portfolio Website
 
 ONLINE PREVIEW
-https://eriksenlezama.github.io/danpatinofotografia/
+https://eriksenlezama.github.io/danpatinofotografia/inizio.html
