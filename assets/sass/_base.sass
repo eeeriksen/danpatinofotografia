@@ -1,0 +1,20 @@
+//		
+//		Variables, mixins, extends, etc. y estilos generales
+//
+
+/***** INICIO BASE *****/
+
+$gris: #444
+$gris-m: #888
+$gris-ml: #bbb
+$gris-l: #efefef
+
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+@mixin media-custom($min, $max)
+	@media (max-width: $max) and (min-width: $min)
+		@content
+/***** FIN BASE *****/
