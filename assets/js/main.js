@@ -15,13 +15,13 @@ $(document).ready(function(){
 
       //Change background-color inizio.html header when content is white
       if($(window).scrollTop() > inizioStart){
-         $('#ini-header').addClass('white');
-         $('#ini-header').removeClass('black');
+         $('#ini-header, nav.menu').addClass('white');
+         $('#ini-header, nav.menu').removeClass('black');
       } else if($(window).scrollTop() == 0){
-         $('#ini-header').removeClass('black');
+         $('#ini-header, nav.menu').removeClass('black');
       } else {
-         $('#ini-header').addClass('black');
-         $('#ini-header').removeClass('white');
+         $('#ini-header, nav.menu').addClass('black');
+         $('#ini-header, nav.menu').removeClass('white');
       }
       cero = $(window).scrollTop();
    });
