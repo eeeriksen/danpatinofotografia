@@ -54,6 +54,13 @@ header#all-header.shadow, header#ini-header.shadow {
   box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.1);
 }
 
+.error, .success {
+  margin-left: 58px;
+  color: #8d8d8d;
+  font-size: 13px;
+  display: block;
+}
+
 /****** FIN GENERAL*****/
 /***** INICIO HEADER *****/
 header {
@@ -140,28 +147,13 @@ header nav.menu {
   transition: all .4s;
 }
 
-header nav.menu a, header nav.menu ul.portfolio-menu li {
+header nav.menu a {
   margin-left: 25px;
   margin-right: 10px;
   font-size: 15px;
   font-family: 'Montserrat';
   font-weight: 800;
   text-transform: uppercase;
-}
-
-header nav.menu ul.portfolio-menu {
-  display: none;
-  position: absolute;
-  top: 42px;
-  left: 85px;
-}
-
-header nav.menu ul.portfolio-menu li {
-  list-style: none;
-  color: #888;
-  padding: 4px 26px;
-  background-color: white;
-  border-top: 1px solid #efefef;
 }
 
 header nav.menu ul.social {
@@ -456,6 +448,115 @@ body.portfolio .portfolio {
   padding: 160px 100px;
 }
 
+body.portfolio .portfolio .portfolio-menu {
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: white;
+}
+
+body.portfolio .portfolio .portfolio-menu a {
+  text-decoration: none;
+  color: #888;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0 18px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+body.portfolio .portfolio .portfolio-menu a:hover {
+  color: #bbb;
+}
+
+body.portfolio .portfolio #overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 1111;
+  background-color: black;
+}
+
+body.portfolio .portfolio #overlay #full-image {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  margin: auto;
+  -webkit-animation-name: onOverlay;
+  animation-name: onOverlay;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+}
+
+body.portfolio .portfolio #overlay #full-image div {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+body.portfolio .portfolio #overlay #full-image div #previous, body.portfolio .portfolio #overlay #full-image div #next {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 50px;
+  height: 50px;
+}
+
+body.portfolio .portfolio #overlay #full-image div #close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+body.portfolio .portfolio #overlay #full-image div #close svg, body.portfolio .portfolio #overlay #full-image div #previous svg, body.portfolio .portfolio #overlay #full-image div #next svg {
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+body.portfolio .portfolio #overlay #full-image div #close svg:hover, body.portfolio .portfolio #overlay #full-image div #previous svg:hover, body.portfolio .portfolio #overlay #full-image div #next svg:hover {
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+body.portfolio .portfolio #overlay #full-image div #next {
+  right: 0;
+}
+
+body.portfolio .portfolio #overlay #full-image div img {
+  height: 100%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body.portfolio .portfolio .container-images {
   background-color: white;
   width: 100%;
@@ -480,6 +581,25 @@ body.portfolio .portfolio .container-images .image img {
   width: 100%;
   height: auto;
   padding: 10px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes onOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes onOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /***** FIN PORTFOLIO *******/
@@ -625,7 +745,7 @@ body.portfolio .portfolio .container-images .image img {
   left: 20px;
 }
 
-.container-contact section.contact-form form input[type=button] {
+.container-contact section.contact-form form input[type=submit] {
   border: none;
   -webkit-tap-highlight-color: transparent;
   height: 40px;
@@ -646,18 +766,18 @@ body.portfolio .portfolio .container-images .image img {
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
-.container-contact section.contact-form form input[type=button]:hover {
+.container-contact section.contact-form form input[type=submit]:hover {
   color: #efefef;
 }
 
-.container-contact section.contact-form form input[type=button]:active {
+.container-contact section.contact-form form input[type=submit]:active {
   -webkit-transform: translateY(0px);
   -ms-transform: translateY(0px);
   transform: translateY(0px);
   text-shadow: 0px 0px 0px transparent;
 }
 
-.container-contact section.contact-form form input[type=button]::-moz-focus-inner {
+.container-contact section.contact-form form input[type=submit]::-moz-focus-inner {
   border: 0;
 }
 
@@ -786,7 +906,7 @@ footer .info p.developed a:hover {
     height: 260px;
     font-size: 37px;
   }
-  .container-contact section.contact-form form input[type=button] {
+  .container-contact section.contact-form form input[type=submit] {
     height: 110px;
     width: 350px;
     font-size: 70px;
@@ -1034,7 +1154,7 @@ footer .info p.developed a:hover {
     height: 260px;
     font-size: 32px;
   }
-  .container-contact section.contact-form form input[type=button] {
+  .container-contact section.contact-form form input[type=submit] {
     height: 110px;
     width: 290px;
     font-size: 50px;
@@ -1190,7 +1310,7 @@ footer .info p.developed a:hover {
     height: 260px;
     font-size: 28px;
   }
-  .container-contact section.contact-form form input[type=button] {
+  .container-contact section.contact-form form input[type=submit] {
     height: 110px;
     width: 250px;
     font-size: 40px;
@@ -1273,7 +1393,7 @@ footer .info p.developed a:hover {
     border-left: 10px solid #888;
   }
   body.portfolio .portfolio {
-    padding: 160px 100px 100px 100px;
+    padding: 90px 100px 80px 100px;
   }
   body.portfolio .portfolio .container-images {
     padding: 20px;
@@ -1316,28 +1436,28 @@ footer .info p.developed a:hover {
     margin-bottom: 60px;
   }
   .container-contact section.contact-form form input[type=text] {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     height: 55px;
     border-bottom: 1px solid #efefef;
     padding: 0 60px;
-    font-size: 21px;
+    font-size: 18px;
   }
   .container-contact section.contact-form form label {
-    font-size: 21px;
-    top: -70px;
-    left: 61px;
+    font-size: 18px;
+    top: -61px;
+    left: 60px;
   }
   .container-contact section.contact-form form label:last-of-type {
     left: 60px;
-    top: -190px;
+    top: -150px;
   }
   .container-contact section.contact-form form textarea {
     border-bottom: 2px solid #efefef;
     padding: 0 60px;
-    height: 170px;
-    font-size: 21px;
+    height: 130px;
+    font-size: 18px;
   }
-  .container-contact section.contact-form form input[type=button] {
+  .container-contact section.contact-form form input[type=submit] {
     height: 80px;
     width: 210px;
     font-size: 30px;
@@ -1385,9 +1505,6 @@ footer .info p.developed a:hover {
   body.inizio section.quote p {
     font-size: 58px;
   }
-  body.portfolio .portfolio {
-    padding: 120px 50px 50px 50px;
-  }
   body.portfolio .portfolio .container-images {
     padding: 40px 10px;
   }
@@ -1406,7 +1523,7 @@ footer .info p.developed a:hover {
   .container-contact section.contact-form form h2 {
     font-size: 34px;
   }
-  .container-contact section.contact-form form input[type=button] {
+  .container-contact section.contact-form form input[type=submit] {
     width: 125px;
     font-size: 26px;
   }
@@ -1513,7 +1630,7 @@ footer .info p.developed a:hover {
   .container-contact section.contact-form form h2 {
     font-size: 35px;
   }
-  .container-contact section.contact-form form input[type=button] {
+  .container-contact section.contact-form form input[type=submit] {
     width: 125px;
     font-size: 25px;
   }
@@ -1620,7 +1737,7 @@ footer .info p.developed a:hover {
   .container-contact section.contact-form form h2 {
     font-size: 28px;
   }
-  .container-contact section.contact-form form input[type=button] {
+  .container-contact section.contact-form form input[type=submit] {
     width: 110px;
     font-size: 22px;
   }
@@ -1659,7 +1776,7 @@ footer .info p.developed a:hover {
   .container-contact section.contact-form form h2 {
     font-size: 28px;
   }
-  .container-contact section.contact-form form input[type=button] {
+  .container-contact section.contact-form form input[type=submit] {
     width: 115px;
     font-size: 23px;
   }
@@ -2001,7 +2118,7 @@ footer .info p.developed a:hover {
   .container-contact section.contact-form form textarea {
     height: 130px;
   }
-  .container-contact section.contact-form form input[type=button] {
+  .container-contact section.contact-form form input[type=submit] {
     height: 50px;
   }
   footer {
