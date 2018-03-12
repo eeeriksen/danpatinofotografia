@@ -75,7 +75,7 @@ $(document).ready(function(){
       // container image and buttons next previous
       var fImg = document.getElementById('f-img');
       // close button
-      var close = document.getElementById('close');
+      var close = document.getElementById('closeX');
       // image tag
       var coverImage = document.getElementById('cover-image');
       // listener event click, when click out of the img
