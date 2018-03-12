@@ -23,9 +23,9 @@
 		</label>
 		<input type="checkbox" name="menu" id="menu">
 		<nav class="menu">
-			<a href="inizio">Inizio</a>
-			<a href="portfolio">Portfolio</a>
-			<a href="contatti">Contatti</a>
+			<a href="inizio.html">Inizio</a>
+			<a href="portfolio.html">Portfolio</a>
+			<a href="contatti.php">Contatti</a>
 			<ul class="social">
 				<li><!-- SVG Facebbok-->
 					<svg class="icon-facebook" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="339px" height="340.422px" viewBox="-164 -1.028 339 340.422" enable-background="new -164 -1.028 339 340.422" xml:space="preserve">
@@ -41,185 +41,212 @@
 		</nav>
 	</header>
 	<div class="portfolio">
+		<nav class="portfolio-menu">
+			<a class="filters" id="filter-ritratti" href="portfolio/ritratti.html">RITRATTI</a>
+			<a class="filters" id="filter-matrimonio" href="portfolio/matrimonio.html">MATRIMONIO</a>
+			<a class="filters" id="filter-moda" href="portfolio/moda.html">MODA</a>
+		</nav>
+		<div id="overlay">
+			<div id="full-image">
+				<div id="f-img">
+					<span id="close">
+						<svg width="100%" height="100%" viewBox="-12.5 -12.5 50 50">
+							<image href="images/svg/close.svg" width="22" height="22" />
+						</svg>
+					</span>
+					<span id="previous">
+						<svg width="100%" height="100%" viewBox="-12.5 -12.5 50 50">
+							<image href="images/svg/left-caret.svg" width="24" height="24" />
+						</svg>
+					</span>
+					<img id="over-img" src="" />
+					<span id="next">
+						<svg width="100%" height="100%" viewBox="-12.5 -12.5 50 50">
+							<image href="images/svg/right-caret.svg" width="24" height="24" />
+						</svg>
+					</span>
+				</div>
+			</div>
+		</div>
 		<div class="container-images">
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-1.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-2.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-3.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-4.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-5.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-6.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-7.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-8.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-10.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-11.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-14.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-15.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-16.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-17.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-18.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-19.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-20.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-21.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-22.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-23.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-24.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-26.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-27.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-30.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-31.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-32.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-34.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-33.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-9.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-12.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-25.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-13.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-28.jpg">
-			</div>
-			<div class="image">
-				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-29.jpg">
-			</div>
-			<div class="image">
+			<div class="image ritratti">
 				<img src="images/ritratti/dan-patino-fotografia-ritratto-13.jpg">
 			</div>
-			<div class="image">
+			<div class="image ritratti">
 				<img src="images/ritratti/dan-patino-fotografia-ritratto-1.jpg">
 			</div>
-			<div class="image">
+			<div class="image ritratti">
 				<img src="images/ritratti/dan-patino-fotografia-ritratto-5.jpg">
 			</div>
-			<div class="image">
+			<div class="image ritratti">
 				<img src="images/ritratti/dan-patino-fotografia-ritratto-7.jpg">
 			</div>
-			<div class="image">
+			<div class="image ritratti">
 				<img src="images/ritratti/dan-patino-fotografia-ritratto-8.jpg">
 			</div>
-			<div class="image">
+			<div class="image ritratti">
 				<img src="images/ritratti/dan-patino-fotografia-ritratto-3.jpg">
 			</div>
-			<div class="image">
-				<img src="images/ritratti/dan-patino-fotografia-ritratto-9.jpg">
-			</div>
-			<div class="image">
-				<img src="images/ritratti/dan-patino-fotografia-ritratto-2.jpg">
-			</div>
-			<div class="image">
-				<img src="images/ritratti/dan-patino-fotografia-ritratto-10.jpg">
-			</div>
-			<div class="image">
-				<img src="images/ritratti/dan-patino-fotografia-ritratto-12.jpg">
-			</div>
-			<div class="image">
-				<img src="images/ritratti/dan-patino-fotografia-ritratto-14.jpg">
-			</div>
-			<div class="image">
+			<div class="image ritratti">
 				<img src="images/ritratti/dan-patino-fotografia-ritratto-4.jpg">
 			</div>
-			<div class="image">
+			<div class="image ritratti">
 				<img src="images/ritratti/dan-patino-fotografia-ritratto-6.jpg">
 			</div>
-			<div class="image">
+			<div class="image ritratti">
 				<img src="images/ritratti/dan-patino-fotografia-ritratto-11.jpg">
 			</div>
-			<div class="image">
+			<div class="image ritratti">
+				<img src="images/ritratti/dan-patino-fotografia-ritratto-9.jpg">
+			</div>
+			<div class="image ritratti">
+				<img src="images/ritratti/dan-patino-fotografia-ritratto-2.jpg">
+			</div>
+			<div class="image ritratti">
+				<img src="images/ritratti/dan-patino-fotografia-ritratto-10.jpg">
+			</div>
+			<div class="image ritratti">
+				<img src="images/ritratti/dan-patino-fotografia-ritratto-12.jpg">
+			</div>
+			<div class="image ritratti">
+				<img src="images/ritratti/dan-patino-fotografia-ritratto-14.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-31.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-32.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-34.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-33.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-9.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-12.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-25.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-13.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-28.jpg">
+			</div>
+			<div id="del" class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-29.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-1.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-2.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-3.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-4.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-5.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-6.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-7.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-8.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-10.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-11.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-14.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-15.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-16.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-17.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-18.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-19.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-20.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-21.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-22.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-23.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-24.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-26.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-27.jpg">
+			</div>
+			<div class="image matrimonio">
+				<img src="images/matrimonio/dan-patino-fotografia-matrimonio-portfolio-30.jpg">
+			</div>
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-12.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-13.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-11.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-5.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-10.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-2.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-3.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-4.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-1.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-6.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-7.jpg">
 			</div>
-			<div class="image">
+			<div class="image moda">
 				<img src="images/moda/dan-patino-fotografia-moda-portfolio-9.jpg">
 			</div>
 		</div>
