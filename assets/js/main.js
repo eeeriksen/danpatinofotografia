@@ -1,5 +1,5 @@
 $(document).ready(function(){
-   
+
    //Show header stuffs
    var cero = 0;
    var inizioStart = $('.header-image').innerHeight();
@@ -18,13 +18,41 @@ $(document).ready(function(){
          $('#ini-header, nav.menu').addClass('white');
          $('#ini-header, nav.menu').removeClass('black');
       } else if($(window).scrollTop() == 0){
+         $('#all-header, #ini-header').removeClass('shadow');
          $('#ini-header, nav.menu').removeClass('black');
       } else {
          $('#ini-header, nav.menu').addClass('black');
          $('#ini-header, nav.menu').removeClass('white');
       }
       cero = $(window).scrollTop();
-   });
+
+      // inizio matrimonio
+      // Offset images categories (Y Position)
+      var posMatri = document.querySelector('article.matrimonio .image').offsetTop;
+      var posRitratti = document.querySelector('article.ritratti .image').offsetTop;
+      var posModa = document.querySelector('article.moda .image').offsetTop;
+
+      // Scroll Position
+      var scrollPos = window.pageYOffset;
+      // Window Vertical Size
+      var heightWindow = document.documentElement.clientHeight;
+
+      // Images categories
+      var imgMatri = document.querySelector('article.matrimonio .image img');
+      var imgRitratti = document.querySelector('article.ritratti .image img');
+      var imgModa = document.querySelector('article.moda .image img');
+      // Show when position
+      if (scrollPos > (posMatri - (heightWindow/3*2))) {
+         imgMatri.classList.add('show');
+      }
+      if (scrollPos > (posRitratti - (heightWindow/3*2))) {
+         imgRitratti.classList.add('show');
+      }
+      if (scrollPos > (posModa - (heightWindow/3*2))) {
+         imgModa.classList.add('show');
+      }
+
+   });// fin on scroll
 
    // ---------
    // portfilio click events
@@ -75,7 +103,7 @@ $(document).ready(function(){
       // container image and buttons next previous
       var fImg = document.getElementById('f-img');
       // close button
-      var close = document.getElementById('closeX');
+      var close = document.querySelector('#close img');
       // image tag
       var coverImage = document.getElementById('cover-image');
       // listener event click, when click out of the img
@@ -89,7 +117,7 @@ $(document).ready(function(){
 
    });//  fin .image img (click)
 
-   $('#filter-ritratti').on('click', function(e){
+   /*$('#filter-ritratti').on('click', function(e){
       $('.image.matrimonio, .image.moda, .image.ritratti').css("display", "none");
       $('.image.ritratti').css("display", "block");
       e.preventDefault();
@@ -114,17 +142,19 @@ $(document).ready(function(){
             }
          }
 
-      });  */
+      });  *//*
       $('.image.matrimonio').css("display", "block");
       $('#del').css("display", "none");
       e.preventDefault();
 
-   });// fin click filter ritratti
+   });// fin click filter matrimonio*/
 
-   $('#filter-moda').on('click', function(e){
+   /*$('#filter-moda').on('click', function(e){
       $('.image.matrimonio, .image.moda, .image.ritratti').css("display", "none");
       $('.image.moda').css("display", "block");
       e.preventDefault();
-   });// fin click filter ritratti
+   });// fin click filter moda*/
 
+
+   //
 });// Document ready
