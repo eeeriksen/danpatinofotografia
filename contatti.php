@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="shortcut icon" href="images/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Philosopher:700" rel="stylesheet">
 	<script src="assets/js/jquery.js"></script>
 </head>
 <body>
@@ -77,7 +76,7 @@
 ?>
 	<header id="all-header">
 		<nav class="name">
-			<a href="http://www.danpatinofotografia.com/">Dan Pati&ntilde;o</a>
+			<a href="http://www.danpatinofotografia.com">Dan Pati&ntilde;o</a>
 		</nav>
 		<label for="menu">
 			<div class="bars">
@@ -88,7 +87,7 @@
 		</label>
 		<input type="checkbox" name="menu" id="menu">
 		<nav class="menu">
-			<a href="inizio.html">Inizio</a>
+			<a href="http://www.danpatinofotografia.com">Inizio</a>
 			<a href="portfolio.html">Portfolio</a>
 			<a href="contatti.php">Contatti</a>
 			<ul class="social">
@@ -127,17 +126,13 @@
 		<section class="contact-form">
 			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="contact-form">
 				<h2>Formulario de Contacto</h2>
-				<input type="text" name="name" value="<?php echo $name;?>">
+				<input type="text" placeholder="Nome" name="name" value="<?php echo $name;?>">
 				<span class="error">&nbsp;<?php echo $name_errorr;?></span>
-				<label for="name">Nombre completo</label>
-				<input type="text" name="email" value="<?php echo $email;?>">
+				<input type="text" placeholder="Email" name="email" value="<?php echo $email;?>">
 				<span class="error">&nbsp;<?php echo $email_errorr;?></span>
-				<label for="email">Correo electronico</label>
-				<input type="text" name="phone" value="<?php echo $phone;?>">
+				<input type="text" placeholder="Phone" name="phone" value="<?php echo $phone;?>">
 				<span class="error">&nbsp;<?php echo $phone_errorr;?></span>
-				<label for="phone">Telefono</label>
-				<textarea type="text" name="message"><?php echo $message;?></textarea>
-				<label for="name">Mensaje</label>
+				<textarea type="text" placeholder="Message" name="message"><?php echo $message;?></textarea>
 				<input type="submit" name="submit" value="Enviar">
 				<div class="success"><?php echo $success ?></div>
 			</form>
@@ -145,8 +140,8 @@
 	</div>
 	<footer>
 		<div class="info">
-			<p class="copy">Copyright &copy; Dan Pati&ntilde;o Fotografia. Tutti i diritti riservati.</p>
-			<p class="developed"> Developed by <a href="mailto:eriksen.lezama@gmail.com">Eriksen</a></p>
+			<p class="copy">Copyright &copy; Dan Pati&ntilde;o Fotografia. Tutti i diritti riservati. </p>
+			<p class="developed">Developed by <a href="mailto:eriksen.lezama@gmail.com">Eriksen</a></p>
 		</div>
 	</footer>
 	<script src="assets/js/main.js"></script>
