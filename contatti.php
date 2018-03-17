@@ -5,7 +5,14 @@
 	<title>Daniel Pati&ntilde;o</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="shortcut icon" href="images/favicon.ico" />
+	<!--[if lte IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.ie.css">
+	<![endif]-->
 	<script src="assets/js/jquery.js"></script>
 </head>
 <body>
@@ -17,27 +24,27 @@
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (empty($_POST["name"])) {
-			$name_errorr = "Name is required";
+			$name_errorr = "Nome e cognome e richiesti";
 		} else {
 			$name = test_input($_POST["name"]);
 			// check if name only contains letters and whitespace
 			if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-				$name_errorr = "Only letters and white space allowed";
+				$name_errorr = "Sono consentiti solo lettere e spazi in bianco";
 			}
 		}
 
 		if (empty($_POST["email"])) {
-			$email_errorr = "Email is required";
+			$email_errorr = "Indirizzio di posta elettronica richiesto";
 		} else {
 			$email = test_input($_POST["email"]);
 			// check if e-mail address is well-formed
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-				$email_errorr = "Invalid email format";
+				$email_errorr = "Formato di posta elettronica non corretto";
 			}
 		}
 
 		if (empty($_POST["phone"])) {
-			$phone_errorr = "Phone is required";
+			$phone_errorr = "Numero di telefono richiesto";
 		} else {
 			$phone = test_input($_POST["phone"]);
 			// check if e-mail address is well-formed
@@ -60,9 +67,9 @@
 			}
 			
 			$to = 'info@danpatinofotografia.com';
-			$subject = 'Contact Form Submit';
+			$subject = $name . ' - del Formulario de Contacto Dan Patino Fotografia';
 			if (mail($to, $subject, $message_body)){
-				$success = "Message sent, thank you for contacting us!";
+				$success = "Messaggio inviato, grazie per contattarmi!";
 				$name = $email = $phone = $message = '';
 			}
 		}
@@ -124,16 +131,16 @@
 			</div>
 		</section>
 		<section class="contact-form">
-			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="contact-form">
-				<h2>Formulario de Contacto</h2>
-				<input type="text" placeholder="Nome" name="name" value="<?php echo $name;?>">
-				<span class="error">&nbsp;<?php echo $name_errorr;?></span>
-				<input type="text" placeholder="Email" name="email" value="<?php echo $email;?>">
-				<span class="error">&nbsp;<?php echo $email_errorr;?></span>
-				<input type="text" placeholder="Phone" name="phone" value="<?php echo $phone;?>">
-				<span class="error">&nbsp;<?php echo $phone_errorr;?></span>
-				<textarea type="text" placeholder="Message" name="message"><?php echo $message;?></textarea>
-				<input type="submit" name="submit" value="Enviar">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="contact-form">
+				<h2>Formulario di Contatto</h2>
+				<input type="text" placeholder="Nome" name="name" value="<?php echo $name; ?>">
+				<span class="error">&nbsp;<?php echo $name_errorr; ?></span>
+				<input type="text" placeholder="Posta" name="email" value="<?php echo $email; ?>">
+				<span class="error">&nbsp;<?php echo $email_errorr; ?></span>
+				<input type="text" placeholder="Telefono" name="phone" value="<?php echo $phone; ?>">
+				<span class="error">&nbsp;<?php echo $phone_errorr; ?></span>
+				<textarea type="text" placeholder="Messaggio" name="message"><?php echo $message; ?></textarea>
+				<input type="submit" name="submit" value="Invio">
 				<div class="success"><?php echo $success ?></div>
 			</form>
 		</section>
