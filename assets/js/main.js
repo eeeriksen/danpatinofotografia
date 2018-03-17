@@ -6,8 +6,13 @@ $(document).ready(function(){
    $(window).on('scroll', function(){
 
       //Show and hide header when scroll up and down
-      $('#all-header, #ini-header')
-      .toggleClass('hide', $(window).scrollTop() > cero);
+      if($(window).scrollTop() > cero){
+         $('#all-header, #ini-header').addClass('hide');
+      } else {
+         $('#all-header, #ini-header').removeClass('hide');
+      }
+      /*$('#all-header, #ini-header')
+      .toggleClass('hide', $(window).scrollTop() > cero);*/
 
       //Add shadow to header
       $('#all-header, #ini-header')
@@ -32,8 +37,9 @@ $(document).ready(function(){
       var posRitratti = document.querySelector('article.ritratti .image').offsetTop;
       var posModa = document.querySelector('article.moda .image').offsetTop;
 
+      var scrollPos = 0;
       // Scroll Position
-      var scrollPos = window.pageYOffset;
+      scrollPos = window.pageYOffset;
       // Window Vertical Size
       var heightWindow = document.documentElement.clientHeight;
 
