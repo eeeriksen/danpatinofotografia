@@ -297,6 +297,7 @@ section.header-image article.presentation h1 {
   font-size: 40px;
   font-family: Philosopher;
   color: #bbb;
+  margin: 0;
 }
 
 section.header-image article.presentation h2 {
@@ -661,6 +662,7 @@ body.portfolio .portfolio .container-images .image img {
   background-color: #888;
   border: 1px solid #888;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .container-contact section.contact .text p {

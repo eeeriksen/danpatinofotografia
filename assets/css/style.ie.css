@@ -1,0 +1,18 @@
+/* CENTRAR TODO VERTICALMENTE */
+section.header-image article.presentation, header nav.name, header nav.menu {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+/* Flexbox alternative header */
+header nav.name {
+  display: inline-block;
+  float: left; }
+
+header nav.menu {
+  display: inline-block;
+  float: right; }
+  header nav.menu ul, header nav.menu ul li {
+    display: inline-block; }
